@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>SOL Schulsozialarbeit Niedersachsen | Band 3 Modul 1: Grundlagen professioneller Beratung</title>
+<style>
+:root{--bg:#f4f6f9;--card:#fff;--primary:#2c5f8a;--primary2:#e8f0f8;--green:#2f7d59;--green2:#e8f5ee;--warn:#d4860a;--warn2:#fff4df;--red:#b83a32;--red2:#fdeceb;--purple:#6f579d;--purple2:#f1ecfa;--ink:#172033;--muted:#657386;--line:#d2dce8;--shadow:0 2px 14px rgba(20,50,80,.10);--r:12px}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}h1,h2,h3{line-height:1.25}p{margin:.4rem 0 .8rem}ul,ol{margin-left:1.2rem}
+header{background:var(--primary);color:#fff;position:sticky;top:0;z-index:50;padding:1rem}.head{max-width:1180px;margin:auto;display:flex;gap:1rem;align-items:flex-start}.badge{background:rgba(255,255,255,.18);border-radius:6px;padding:.25rem .65rem;font-size:.75rem;font-weight:800}.ht{font-weight:800}.hs{font-size:.82rem;opacity:.85}.ha{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin-top:.65rem}.ha label{font-size:.82rem;font-weight:800}.ha input{border:0;border-radius:8px;padding:.5rem .7rem;min-width:230px}.ha button{border:0;background:var(--green);color:#fff;border-radius:8px;padding:.5rem .8rem;font-weight:800;cursor:pointer}.ha button:disabled{opacity:.5;cursor:not-allowed}.ha span{font-size:.78rem;color:#e8f4ff}
+.progress{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:70px;z-index:40;padding:.6rem 1rem}.proginner{max-width:1180px;margin:auto}.pl{display:flex;justify-content:space-between;gap:1rem;font-size:.8rem;color:var(--muted);margin-bottom:.25rem}.track{height:8px;background:#dbe4ee;border-radius:99px;overflow:hidden}.fill{height:100%;width:0;background:linear-gradient(90deg,var(--primary),var(--green));transition:.3s}
+.layout{max-width:1180px;margin:auto;padding:1rem;display:grid;grid-template-columns:260px 1fr;gap:1.2rem}.nav{position:sticky;top:132px;align-self:start;background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:.75rem}.nav button{width:100%;margin-bottom:.5rem}.nav h4{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:.5rem}.nav a{display:block;text-decoration:none;color:var(--ink);font-size:.86rem;padding:.45rem .55rem;border-radius:8px}.nav a:hover{background:var(--primary2)}.nav a.done{background:var(--green2);color:var(--green);font-weight:800}.navlinks.collapsed{display:none}
+main{min-width:0}.intro,.notice,.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);margin:0 0 1rem}.intro{background:var(--primary2);border-color:var(--primary);padding:1.2rem}.intro h1{color:var(--primary);margin:0 0 .6rem}.notice{border-left:5px solid var(--warn);padding:.9rem 1rem}.notice strong{color:var(--warn)}
+.card{overflow:hidden;scroll-margin-top:140px}.ch{display:flex;gap:.7rem;align-items:center;padding:1rem 1.2rem;cursor:pointer}.ch:hover{background:var(--primary2)}.ci{font-size:1.35rem}.ct{flex:1}.ct b{display:block}.ct small{color:var(--muted)}.status{font-size:.75rem;border-radius:99px;padding:.25rem .6rem;background:#eee;color:#666;font-weight:800}.status.done{background:var(--green2);color:var(--green)}.status.active{background:var(--warn2);color:var(--warn)}.cb{display:none;padding:0 1.2rem 1.2rem}.card.open .cb{display:block}.card.locked .ch{opacity:.55}.card.locked .cb{display:none!important}
+.block{border-left:4px solid var(--primary);border-radius:8px;padding:1rem;margin:1rem 0;background:var(--primary2)}.task{border-color:var(--green);background:var(--green2)}.case{border-color:var(--warn);background:var(--warn2)}.ref{border-color:var(--purple);background:var(--purple2)}.law{border-color:#8b5e3c;background:#f8f0e8}.sol{display:none;border-color:var(--green);background:#f0faf5}.sol.show{display:block}.bl{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;font-weight:900;opacity:.7;margin-bottom:.45rem}
+.btnrow{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.8rem}button.btn{border:0;border-radius:8px;padding:.65rem 1rem;min-height:42px;background:var(--primary);color:#fff;font-weight:800;cursor:pointer}button.secondary{background:var(--green)}button.outline{background:#fff;color:var(--primary);border:2px solid var(--primary)}button.danger{background:var(--red)}button:disabled{opacity:.5;cursor:not-allowed}
+textarea,input,select{width:100%;border:1.5px solid var(--line);border-radius:8px;padding:.65rem .75rem;font:inherit;background:#fff}textarea{min-height:105px;resize:vertical}label{display:block;font-weight:800;font-size:.9rem;margin:.45rem 0 .25rem}.hint{font-size:.78rem;color:var(--muted)}
+.row{display:grid;grid-template-columns:1.2fr 1fr;gap:.7rem;align-items:center;background:#fff;border:1px solid var(--line);border-radius:8px;padding:.7rem;margin:.55rem 0}.item{background:#fff;border:1.5px solid var(--line);border-radius:8px;padding:.75rem;margin:.55rem 0}.choices{display:flex;gap:.5rem;flex-wrap:wrap}.choice{background:#fff;color:var(--ink);border:1.5px solid var(--line);border-radius:99px;padding:.4rem .8rem;cursor:pointer;font-weight:700}.choice.active{background:var(--primary);color:#fff;border-color:var(--primary)}.choice[data-val=gruen]{border-color:var(--green);color:var(--green)}.choice[data-val=gelb]{border-color:var(--warn);color:var(--warn)}.choice[data-val=rot]{border-color:var(--red);color:var(--red)}.choice.active[data-val=gruen]{background:var(--green);color:#fff}.choice.active[data-val=gelb]{background:var(--warn);color:#fff}.choice.active[data-val=rot]{background:var(--red);color:#fff}
+.fb,.val,.sendstatus{display:none;border-radius:8px;padding:.65rem .85rem;margin-top:.6rem;font-size:.86rem}.show{display:block}.ok{background:var(--green2);border-left:4px solid var(--green)}.warn{background:var(--warn2);border-left:4px solid var(--warn)}.err{background:var(--red2);border-left:4px solid var(--red)}
+table{width:100%;border-collapse:collapse;background:#fff;font-size:.88rem}th{background:var(--primary);color:#fff;text-align:left}td,th{padding:.55rem;border-bottom:1px solid var(--line)}.tablewrap{overflow-x:auto}
+.result{display:none;text-align:center;border:2px solid var(--primary);background:var(--primary2);border-radius:var(--r);padding:1rem;margin-top:1rem}.result.show{display:block}.score{font-size:2rem;font-weight:900;color:var(--primary)}
+
+.phase-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem;margin:.9rem 0}
+.phase-card{background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:.8rem;border-left:5px solid var(--primary)}
+.phase-card b{color:var(--primary)}
+.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin:1rem 0}
+.compare-box{background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:.9rem}
+.compare-box.good{border-left:5px solid var(--green)}
+.compare-box.bad{border-left:5px solid var(--red)}
+.compare-box h4{margin:.1rem 0 .5rem;color:var(--primary)}
+.compare-box.bad h4{color:var(--red)}
+.teacher-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin:.8rem 0}
+.teacher-tile{background:#fff;border:1px solid var(--line);border-radius:10px;padding:.75rem}
+.teacher-tile b{display:block;color:var(--primary);font-size:.85rem}
+.teacher-tile span{font-size:1.3rem;font-weight:900}
+.dialogue-repair{background:#fff;border:1px solid var(--line);border-radius:10px;padding:.8rem;margin:.6rem 0}
+@media(max-width:760px){.phase-grid,.compare-grid,.teacher-grid{grid-template-columns:1fr}}
+
+
+.certificate-box{display:none;background:#fff;border:2px solid var(--green);border-left:8px solid var(--green);border-radius:14px;padding:1rem;margin:1rem 0;box-shadow:var(--shadow)}
+.certificate-box.show{display:block}
+.certificate-box h3{margin:.1rem 0 .5rem;color:var(--green)}
+.certificate-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.7rem;margin:.7rem 0}
+.certificate-item{background:var(--green2);border-radius:10px;padding:.7rem}
+.certificate-item b{display:block;color:var(--green);font-size:.8rem}
+@media(max-width:760px){.certificate-grid{grid-template-columns:1fr}}
+
+/* ── Professioneller Modulstandard / Barrierefreiheit ───────────── */
+.skip-link{position:absolute;left:-999px;top:0;background:#fff;color:var(--primary);padding:.7rem 1rem;border:2px solid var(--primary);border-radius:8px;z-index:9999;font-weight:900}.skip-link:focus{left:1rem;top:1rem}.meta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:.75rem;margin:1rem 0}.meta-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:.85rem;box-shadow:var(--shadow)}.meta-card b{display:block;color:var(--primary);font-size:.82rem;margin-bottom:.2rem}.science-box{background:#fff;border:2px solid var(--primary);border-left:8px solid var(--primary);border-radius:12px;padding:1rem 1.1rem;margin:1rem 0}.science-box h3{color:var(--primary);margin:.1rem 0 .55rem}.rubric{width:100%;border-collapse:collapse;margin:1rem 0;background:#fff;font-size:.86rem}.rubric th{background:var(--primary);color:#fff}.rubric td,.rubric th{border:1px solid var(--line);padding:.55rem;vertical-align:top}.source-list{display:grid;gap:.55rem;margin:.8rem 0}.source-item{background:#fff;border:1px solid var(--line);border-radius:8px;padding:.65rem}.quality-note{background:var(--warn2);border-left:5px solid var(--warn);border-radius:8px;padding:.85rem 1rem;margin:.8rem 0}.progress[role=progressbar]{outline:none}.nav a.active{background:var(--primary);color:#fff;font-weight:900}
+@media(max-width:650px){.meta-grid{grid-template-columns:1fr}.science-box{padding:.85rem}}
+
+@media(max-width:900px){.layout{grid-template-columns:1fr}.nav{position:static}.navtoggle{display:block!important}}@media(max-width:650px){.head{display:block}.badge{display:none}.progress{top:62px}.row{grid-template-columns:1fr}.ha input,.ha button,.btnrow button{width:100%}}
+@media print{header,.progress,.nav,.btnrow,button{display:none!important}.layout{display:block}.cb{display:block!important}.card{break-inside:avoid;box-shadow:none}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#hauptinhalt">Zum Hauptinhalt springen</a>
+<header><div class="head"><div class="badge">SOL Niedersachsen</div><div><div class="ht">Band 3 · Modul 1: Grundlagen professioneller Beratung</div><div class="hs">Beratung und Gesprächsführung in der Schulsozialarbeit Niedersachsen</div><div class="ha"><label for="topName">Name/Kürzel:</label><input id="topName" oninput="syncTopName()" placeholder="z. B. EB oder Kurskürzel"><label for="topEmail">E-Mail:</label><input id="topEmail" type="email" oninput="syncTopEmail()" placeholder="z. B. name@example.de"><button id="topSend" onclick="sendResults()">Jetzt senden</button><span id="topStatus">Senden ist nach Eingabe von Name und E-Mail möglich.</span></div></div></div></header>
+<div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Bearbeitungsfortschritt"><div class="proginner"><div class="pl"><span id="progressText">Fortschritt: 0 %</span><span id="progressCount">0 von 12 Abschnitten</span></div><div class="track"><div class="fill" id="fill"></div></div></div></div>
+
+<div class="layout">
+<aside class="nav"><button class="btn outline navtoggle" onclick="toggleNav()" style="display:none">Navigation ein-/ausblenden</button><div id="navLinks" class="navlinks">
+<h4>Orientierung</h4><a id="nav-1" href="#sec-1">1. Orientierung</a><a id="nav-2" href="#sec-2">2. Beratungsauftrag</a><a id="nav-3" href="#sec-3">3. Haltung & Rahmen</a>
+<h4>Gespräch</h4><a id="nav-4" href="#sec-4">4. Erstkontakt</a><a id="nav-5" href="#sec-5">5. Zuhören</a><a id="nav-6" href="#sec-6">6. Fragen</a><a id="nav-7" href="#sec-7">7. Ressourcen</a>
+<h4>Praxis</h4><a id="nav-8" href="#sec-8">8. Grenzen</a><a id="nav-9" href="#sec-9">9. Schwierige Momente</a><a id="nav-10" href="#sec-10">10. Gesprächsplan</a>
+<h4>Abschluss</h4><a id="nav-11" href="#sec-11">11. Gelingensnachweis</a><a id="nav-12" href="#sec-12">12. Transfer & Senden</a></div></aside>
+
+<main id="hauptinhalt">
+<div class="intro"><h1>Band 3, Modul 1: Grundlagen professioneller Beratung</h1><p><strong>Schwerpunkt dieses Moduls ist Beratung und Gesprächsführung in der Schulsozialarbeit in Niedersachsen.</strong> Band 1 hat Rolle und Auftrag grundgelegt. Band 2 hat Recht, Datenschutz, Schutzauftrag und Schnittstellen geklärt. Band 3 fragt nun: Wie führen Sie Gespräche fachlich, respektvoll, vertraulichkeitsbewusst und handlungsorientiert?</p><div class="btnrow"><button class="btn outline" onclick="resetProgress()">↺ Fortschritt zurücksetzen</button><button class="btn outline" onclick="exportResults()">Lokale Ergebnisse als Datei speichern</button></div></div>
+<div class="notice"><strong>Hinweis zur Bearbeitung:</strong> Dieses Modul ist sequenziell aufgebaut. Abschnitte lassen sich erst öffnen, wenn die vorherigen Abschnitte abgeschlossen wurden. Pflichtfelder müssen die Mindestlänge erreichen.</div>
+<div class="notice"><strong>Niedersachsen-Fokus:</strong> Beratung findet im niedersächsischen Schulkontext statt: schulische Verantwortung, Datenschutz, Schutzkonzept, RLSB-Bezüge, Kooperation mit Jugendhilfe und klare Abgrenzung zu Unterricht, Therapie, Schulpsychologie und Ordnungsmaßnahmen.</div>
+
+<div class="card open" id="modulstandard"><div class="ch" onclick="this.parentElement.classList.toggle('open')" role="button" tabindex="0"><span class="ci">🎓</span><div class="ct"><b>Modulstandard: Hochschule, Weiterbildung und Praxis</b><small>Workload · Kompetenzziele · Prüfungsleistung · wissenschaftliche Einordnung</small></div><span class="status active">Standard</span></div><div class="cb">
+<div class="meta-grid">
+  <div class="meta-card"><b>Einordnung</b><span>Band 3 eröffnet den Schwerpunkt Beratung und Gesprächsführung nach den rechtlichen Grundlagen aus Band 2.</span></div>
+  <div class="meta-card"><b>Workload</b><span>90 bis 120 Minuten Selbstlernzeit, plus 30 Minuten Praxisreflexion oder kollegiale Auswertung.</span></div>
+  <div class="meta-card"><b>Voraussetzungen</b><span>Band 1 und Band 2 oder vergleichbares Wissen zu Rolle, Datenschutz und Schutzauftrag.</span></div>
+  <div class="meta-card"><b>Prüfungsleistung</b><span>Gelingensnachweis, Gesprächsplan, Vertraulichkeitserklärung und Praxischeck.</span></div>
+  <div class="meta-card"><b>Anschluss</b><span>Band 3, Modul 2: Gesprächsführung, Gesprächsstruktur und Beratungsprozesse.</span></div>
+  <div class="meta-card"><b>Kompetenzniveau</b><span>Grundlagenmodul für Studium, Anerkennungsjahr, Einarbeitung und Weiterbildung.</span></div>
+</div>
+<div class="science-box"><h3>Wissenschaftsbox: Beratung ist keine Alltagsunterhaltung</h3><p>Professionelle Beratung in der Schulsozialarbeit verbindet Beziehungsgestaltung, Auftragsklärung, Vertraulichkeit, Ressourcenorientierung und institutionelle Rollenklarheit. Sie steht damit in der Tradition klientenzentrierter, lebensweltorientierter und lösungsorientierter Beratungsansätze, bleibt aber an den schulischen Kontext, den Schutzauftrag und die Zuständigkeitsgrenzen der Sozialen Arbeit gebunden.</p><p><strong>Merksatz:</strong> Beratung ist fachlich gut, wenn sie die Autonomie der ratsuchenden Person achtet, den institutionellen Auftrag transparent macht und den nächsten realistischen Schritt gemeinsam entwickelt.</p></div>
+<div class="quality-note"><strong>Qualitätshinweis:</strong> Dieses Modul vermittelt Grundlagen. Es ersetzt keine therapeutische Ausbildung, keine Schulpsychologie, keine Rechtsberatung und kein örtliches Schutzkonzept. Gerade diese Grenze macht Schulsozialarbeit professionell.</div>
+</div></div>
+
+<section class="card open" id="sec-1" data-section="1"><div class="ch" onclick="toggleCard(1)"><span class="ci">🧭</span><div class="ct"><b>1. Orientierung: Was ist Beratung?</b><small>Reihenlogik · Lernziele · Abgrenzung</small></div><span class="status active" id="status-1">offen</span></div><div class="cb"><div class="block"><div class="bl">Theorie</div><p>Beratung in der Schulsozialarbeit ist ein professionelles Gesprächsangebot im Lebensraum Schule. Sie ist freiwillig, niedrigschwellig, vertraulichkeitsbewusst, ressourcenorientiert und auf Unterstützung ausgerichtet. Sie ersetzt keine Therapie, keine schulische Leistungsbewertung, keine Disziplinarmaßnahme und keine Kinderschutzdiagnostik.</p><p>Beratung bedeutet nicht, sofort Lösungen zu liefern. Beratung bedeutet, gemeinsam zu klären: Was ist los? Was ist wichtig? Was wurde schon versucht? Was könnte ein nächster kleiner Schritt sein?</p></div><div class="block task"><div class="bl">Lernziele</div><ul><li>Beratung von Belehrung, Therapie, Disziplinierung und Unterricht unterscheiden.</li><li>Beratungsrahmen fachlich sauber gestalten.</li><li>Zuhören, Klären und Fragen anwenden.</li><li>Grenzen von Vertraulichkeit und Beratung erkennen.</li><li>einen kurzen Beratungsrahmen in verständlicher Sprache formulieren.</li><li>einen strukturierten Erstgesprächsplan mit Auftrag, Vertraulichkeit, Sichtweise und nächstem Schritt erstellen.</li></ul></div><div class="btnrow"><button class="btn" onclick="completeSection(1)">Abschnitt abschließen ▶</button></div></div></section>
+
+<section class="card locked" id="sec-2" data-section="2"><div class="ch" onclick="toggleCard(2)"><span class="ci">§</span><div class="ct"><b>2. Beratungsauftrag im niedersächsischen Schulkontext</b><small>Auftrag · Freiwilligkeit · Grenzen</small></div><span class="status" id="status-2">gesperrt</span></div><div class="cb"><div class="block law"><div class="bl">Orientierung</div><p>Schulsozialarbeit in Niedersachsen arbeitet im schulischen Rahmen, aber mit sozialpädagogischem Auftrag. Beratung muss daher schulischen Kontext, Datenschutz, Schutzauftrag, Beteiligung und Kooperation mit Jugendhilfe beachten.</p><p>Schulsozialarbeit kann beraten, begleiten, vermitteln, stabilisieren, klären und vernetzen. Sie ersetzt nicht Schulleitung, Lehrkraft, Schulpsychologie, Jugendamt, Therapie, Polizei oder medizinische Versorgung.</p></div><div class="block task"><div class="bl">Vorwissenscheck</div><div id="precheck"></div></div><div class="btnrow"><button class="btn outline" onclick="toggleSol('sol2')">Musterlösung anzeigen</button><button class="btn" onclick="completeSection(2)">Abschnitt abschließen ▶</button></div><div class="block sol" id="sol2"><div class="bl">Musterlösung</div><p>Beratung ist Hilfe zur Klärung, nicht Machtinstrument. Vor jedem Gespräch sollten Auftrag, Freiwilligkeit, Vertraulichkeit und Grenzen geklärt werden.</p></div></div></section>
+
+<section class="card locked" id="sec-3" data-section="3"><div class="ch" onclick="toggleCard(3)"><span class="ci">🧱</span><div class="ct"><b>3. Haltung und Gesprächsrahmen</b><small>Respekt · Transparenz · Sicherheit</small></div><span class="status" id="status-3">gesperrt</span></div><div class="cb"><div class="block"><div class="bl">Theorie</div><p>Professionelle Beratung beginnt mit Haltung: wertschätzend, nicht beschämend, neugierig, klar, transparent und grenzbewusst.</p><div class="tablewrap"><table><tr><th>Element</th><th>Funktion</th></tr><tr><td>Freiwilligkeit</td><td>Beratung gelingt besser, wenn Beteiligung nicht als Zwang erlebt wird.</td></tr><tr><td>Vertraulichkeit</td><td>Schafft Sicherheit, hat aber Grenzen bei Schutzfragen.</td></tr><tr><td>Auftragsklärung</td><td>Klärt, wer was möchte und was fachlich Auftrag der SSA ist.</td></tr><tr><td>Transparenz</td><td>Verhindert verdeckte Kontrollaufträge.</td></tr></table></div></div>
+<div class="block"><div class="bl">Gesprächsphasenmodell</div>
+<p>Für Band 3 nutzen wir ein einfaches Grundmodell. Es ist kein starres Skript, sondern eine Orientierung, damit Gespräche nicht zufällig oder rein reaktiv verlaufen.</p>
+<div class="phase-grid">
+  <div class="phase-card"><b>1. Ankommen und Rahmen klären</b><br><span class="text-muted">Begrüßung, Zeit, Freiwilligkeit, Vertraulichkeit.</span></div>
+  <div class="phase-card"><b>2. Anlass und Auftrag klären</b><br><span class="text-muted">Wer möchte was? Lehrkraft, Schüler, Eltern, Schule?</span></div>
+  <div class="phase-card"><b>3. Sichtweise verstehen</b><br><span class="text-muted">Zuhören, spiegeln, nicht vorschnell bewerten.</span></div>
+  <div class="phase-card"><b>4. Themen sortieren</b><br><span class="text-muted">Was ist dringend, was ist wichtig, was ist offen?</span></div>
+  <div class="phase-card"><b>5. Ressourcen und Ausnahmen suchen</b><br><span class="text-muted">Was hat geholfen? Wer unterstützt? Wann klappt es besser?</span></div>
+  <div class="phase-card"><b>6. Nächsten kleinen Schritt vereinbaren</b><br><span class="text-muted">Konkreter, realistischer und überprüfbarer Schritt.</span></div>
+  <div class="phase-card"><b>7. Rückmeldung klären</b><br><span class="text-muted">Was wird an wen weitergegeben, was bleibt vertraulich?</span></div>
+</div></div>
+
+<div class="block task"><div class="bl">Aufgabe: Gesprächsimpulse den Phasen zuordnen</div>
+<p>Ordnen Sie die Gesprächsimpulse dem passenden Abschnitt des Gesprächsphasenmodells zu.</p>
+<div id="phaseAssign"></div>
+<button class="btn outline" onclick="checkRows(PHASE_ASSIGN,'phaseAssignFb','Phasenzuordnungen')">Phasenzuordnung prüfen</button>
+<div class="fb warn" id="phaseAssignFb"></div>
+</div>
+<div class="block task"><div class="bl">Aufgabe: Beratung oder nicht?</div><div id="frame"></div><button class="btn outline" onclick="checkRows(FRAME,'frameFb','Einordnungen')">Einordnung prüfen</button><div class="fb warn" id="frameFb"></div></div>
+<div class="block task"><div class="bl">Beratungsampel</div>
+<p>Bewerten Sie typische Gesprächssätze: grün = gute Beratungshaltung, gelb = kontextabhängig, rot = fachlich problematisch.</p>
+<div id="beratungAmpel"></div>
+</div>
+<div class="btnrow"><button class="btn outline" onclick="toggleSol('sol3')">Musterlösung anzeigen</button><button class="btn" onclick="completeSection(3)">Abschnitt abschließen ▶</button></div><div class="block sol" id="sol3"><p>Wenn ein Gespräch nur dazu dient, einen Schüler „zur Vernunft zu bringen“, ist der Auftrag fachlich zu korrigieren.</p></div></div></section>
+
+<section class="card locked" id="sec-4" data-section="4"><div class="ch" onclick="toggleCard(4)"><span class="ci">🟠</span><div class="ct"><b>4. Erstkontakt: „Ich musste zu Ihnen kommen“</b><small>Zuweisung · Freiwilligkeit · Einstieg</small></div><span class="status" id="status-4">gesperrt</span></div><div class="cb"><div class="block case"><div class="bl">Fall</div><p>Ein Schüler aus Klasse 7 kommt ins Büro und sagt: „Meine Klassenlehrerin hat gesagt, ich muss mit Ihnen reden. Aber ich habe eigentlich keinen Bock.“ Die Lehrkraft hatte vorher gesagt: „Er stört ständig, vielleicht können Sie ihm mal erklären, dass das so nicht geht.“</p></div>
+<div class="block case"><div class="bl">Fallverlauf in 4 Etappen</div>
+<div class="phase-grid">
+  <div class="phase-card"><b>Etappe 1: Zuweisung</b><br>Der Schüler kommt unfreiwillig und zeigt Ablehnung.</div>
+  <div class="phase-card"><b>Etappe 2: Widerstand</b><br>Er sagt: „Ich rede sowieso nicht. Die Lehrerin will nur, dass ich Ärger kriege.“</div>
+  <div class="phase-card"><b>Etappe 3: Rückmeldeerwartung</b><br>Die Lehrkraft erwartet nach dem Gespräch eine konkrete Rückmeldung.</div>
+  <div class="phase-card"><b>Etappe 4: erste Belastung</b><br>Der Schüler sagt leise: „Zu Hause ist gerade auch alles mies.“</div>
+</div>
+</div>
+<div class="block task"><div class="bl">Aufgabe: Einstieg bewerten</div><div id="entry"></div></div>
+<div class="block ref"><div class="bl">Pflichtübung: Vertraulichkeit in 30 Sekunden erklären</div>
+<label for="confidentialityScript">Formulieren Sie eine kurze Erklärung, die für einen Schüler verständlich ist. Mindestens 100 Zeichen.</label>
+<textarea id="confidentialityScript" data-save="confidentialityScript" placeholder="Beispiel: Was du mir erzählst, behandle ich grundsätzlich vertraulich ..."></textarea>
+<div class="hint" id="confidentialityScriptHint">0 Zeichen</div>
+<div class="val" id="val-conf"></div>
+</div>
+
+<div class="block law"><div class="bl">Merksatz Niedersachsen</div>
+<p>In der Schulsozialarbeit in Niedersachsen ist Vertraulichkeit fachlich zentral, aber nicht absolut. Sie steht im Spannungsfeld von sozialpädagogischem Beratungsauftrag, schulischer Verantwortung, Datenschutz, Schutzauftrag und örtlichen Verfahren.</p>
+</div>
+<div class="block ref"><div class="bl">Pflichtreflexion</div><label for="firstWords">Formulieren Sie Ihre ersten Sätze an den Schüler. Mindestens 80 Zeichen.</label><textarea id="firstWords" data-save="firstWords"></textarea><div class="hint" id="firstWordsHint">0 Zeichen</div><div class="val" id="val-4"></div></div><div class="btnrow"><button class="btn outline" onclick="toggleSol('sol4')">Musterlösung anzeigen</button><button class="btn" onclick="validateAndComplete(4)">Abschnitt abschließen ▶</button></div><div class="block sol" id="sol4"><p>„Gut, dass du trotzdem gekommen bist. Ich weiß, dass du nicht freiwillig hier bist. Wir können erst einmal klären, was deine Sicht ist. Ich bin nicht hier, um dich fertigzumachen.“</p></div></div></section>
+
+<section class="card locked" id="sec-5" data-section="5"><div class="ch" onclick="toggleCard(5)"><span class="ci">👂</span><div class="ct"><b>5. Zuhören und Klären</b><small>Aktives Zuhören · Spiegeln · Strukturieren</small></div><span class="status" id="status-5">gesperrt</span></div><div class="cb"><div class="block"><div class="bl">Theorie</div><p>Aktives Zuhören hilft, Missverständnisse zu vermeiden, Gefühle wahrzunehmen, Inhalte zu strukturieren und vorschnelle Bewertungen zu vermeiden.</p><ul><li>Paraphrasieren: „Wenn ich dich richtig verstehe ...“</li><li>Gefühle spiegeln: „Das klingt, als wärst du gerade wütend.“</li><li>Sortieren: „Ich höre drei Themen ...“</li></ul></div><div class="block task"><div class="bl">Methodenkoffer: KASPER</div><p>Für kurze Beratungssituationen im Schulalltag kann die Merkhilfe <strong>KASPER</strong> genutzt werden: <strong>K</strong>ontakt herstellen, <strong>A</strong>uftrag klären, <strong>S</strong>ichtweise verstehen, <strong>P</strong>roblem und Ressourcen sortieren, <strong>E</strong>inen nächsten Schritt vereinbaren, <strong>R</strong>ückmeldung und Vertraulichkeit klären.</p></div>
+<div class="block task"><div class="bl">Typische Beratungsfehler</div>
+<div class="compare-grid">
+  <div class="compare-box bad"><h4>Problematisch</h4><ul>
+    <li>zu schnell lösen wollen,</li>
+    <li>moralisieren oder beschämen,</li>
+    <li>absolute Geheimhaltung versprechen,</li>
+    <li>Auftrag der Lehrkraft ungeprüft übernehmen,</li>
+    <li>zu viele Fragen hintereinander stellen,</li>
+    <li>alles psychologisieren und die eigene Rolle überschreiten.</li>
+  </ul></div>
+  <div class="compare-box good"><h4>Besser</h4><ul>
+    <li>erst verstehen, dann sortieren,</li>
+    <li>Gefühle und Anliegen anerkennen,</li>
+    <li>Vertraulichkeit mit Grenzen erklären,</li>
+    <li>Auftrag transparent klären,</li>
+    <li>kurz, offen und konkret fragen,</li>
+    <li>bei Grenzen weitervermitteln oder Fachberatung nutzen.</li>
+  </ul></div>
+</div></div>
+<div class="block task"><div class="bl">Aufgabe: Reaktionen einordnen</div><div id="listen"></div><button class="btn outline" onclick="checkRows(LISTEN,'listenFb','Reaktionen')">Reaktionen prüfen</button><div class="fb warn" id="listenFb"></div></div><div class="btnrow"><button class="btn" onclick="completeSection(5)">Abschnitt abschließen ▶</button></div></div></section>
+
+<section class="card locked" id="sec-6" data-section="6"><div class="ch" onclick="toggleCard(6)"><span class="ci">❓</span><div class="ct"><b>6. Fragen stellen</b><small>Offen · konkret · nicht suggestiv</small></div><span class="status" id="status-6">gesperrt</span></div><div class="cb"><div class="block"><p>Fragen steuern Gespräche. Professionelle Fragen sind klar, kurz und nicht suggestiv.</p><div class="tablewrap"><table><tr><th>Fragetyp</th><th>Beispiel</th></tr><tr><td>Öffnend</td><td>Was ist aus deiner Sicht gerade wichtig?</td></tr><tr><td>Ressourcenfrage</td><td>Was hat bisher ein bisschen geholfen?</td></tr><tr><td>Skalierungsfrage</td><td>Auf einer Skala von 1 bis 10 ...?</td></tr></table></div></div>
+<div class="block task"><div class="bl">Dialogreparatur</div>
+<p>Ordnen Sie problematischen Aussagen bessere Beratungsreaktionen zu.</p>
+<div id="repair"></div>
+<button class="btn outline" onclick="checkRows(REPAIR,'repairFb','Dialogreparaturen')">Dialogreparaturen prüfen</button>
+<div class="fb warn" id="repairFb"></div>
+</div>
+
+<div class="block ref"><div class="bl">Freitext-Reparatur: schlechte Beratung verbessern</div>
+<p>Formulieren Sie zu mindestens zwei der folgenden Sätze eine bessere Beratungsreaktion: „Dann benimm dich halt besser.“ · „Das ist doch kein Problem.“ · „Ich sage das jetzt der Schulleitung.“</p>
+<label for="freeRepair">Ihre verbesserten Formulierungen. Mindestens 120 Zeichen.</label>
+<textarea id="freeRepair" data-save="freeRepair" placeholder="1. Statt ... würde ich sagen: ..."></textarea>
+<div class="hint" id="freeRepairHint">0 Zeichen</div>
+<div class="val" id="val-repair"></div>
+</div>
+<div class="block task"><div id="questions"></div><button class="btn outline" onclick="checkRows(QUESTIONS,'questionsFb','Fragen')">Fragen prüfen</button><div class="fb warn" id="questionsFb"></div></div><div class="btnrow"><button class="btn" onclick="completeSection(6)">Abschnitt abschließen ▶</button></div></div></section>
+
+<section class="card locked" id="sec-7" data-section="7"><div class="ch" onclick="toggleCard(7)"><span class="ci">🌱</span><div class="ct"><b>7. Ziele, Ressourcen und nächste Schritte</b><small>Lösungsorientierung ohne Schönreden</small></div><span class="status" id="status-7">gesperrt</span></div><div class="cb"><div class="block"><p>Ressourcenorientierung bedeutet nicht, Probleme kleinzureden. Sie sucht Handlungsspielräume, Schutzfaktoren und kleine nächste Schritte.</p></div><div class="block task"><div id="resources"></div></div><div class="btnrow"><button class="btn" onclick="completeSection(7)">Abschnitt abschließen ▶</button></div></div></section>
+
+<section class="card locked" id="sec-8" data-section="8"><div class="ch" onclick="toggleCard(8)"><span class="ci">🧱</span><div class="ct"><b>8. Grenzen von Beratung</b><small>Schutzauftrag · Therapie · Jugendhilfe</small></div><span class="status" id="status-8">gesperrt</span></div><div class="cb"><div class="block law"><p>Bei Selbst- oder Fremdgefährdung, gewichtigen Anhaltspunkten für Kindeswohlgefährdung, schweren psychischen Krisen, Straftaten, medizinischem Behandlungsbedarf oder komplexen familiären Hilfebedarfen braucht es klare Weitervermittlung, Fachberatung oder Schutzverfahren.</p></div>
+
+<div class="block"><div class="bl">3-Satz-Modell: Rückmeldung an Lehrkräfte</div>
+<ol>
+  <li><strong>Das Gespräch hat stattgefunden.</strong></li>
+  <li><strong>Wir haben einen nächsten Schritt vereinbart.</strong></li>
+  <li><strong>Für den Unterricht wäre hilfreich, wenn ...</strong></li>
+</ol>
+<p><strong>Zusatzsatz bei Nachfragen:</strong> „Vertrauliche Inhalte kann ich ohne Grundlage oder Absprache nicht weitergeben.“</p>
+</div>
+<div class="block task"><div class="bl">Rückmeldung an Lehrkräfte</div>
+<p>Nach Beratungsgesprächen entsteht oft die Frage: Was darf die Schulsozialarbeit der Lehrkraft sagen?</p>
+<div class="compare-grid">
+  <div class="compare-box good"><h4>Gute Rückmeldung</h4><p>„Das Gespräch hat stattgefunden. Wir haben einen nächsten Schritt vereinbart. Für den Unterricht wäre hilfreich, wenn Sie zunächst auf X achten. Vertrauliche Inhalte kann ich nicht weitergeben.“</p></div>
+  <div class="compare-box bad"><h4>Problematische Rückmeldung</h4><p>„Er hat mir vertraulich erzählt, dass zu Hause ...“ oder „Die Mutter ist das Problem.“</p></div>
+</div>
+<div id="teacherFeedback"></div>
+<button class="btn outline" onclick="checkRows(TEACHER_FB,'teacherFeedbackFb','Rückmeldungen')">Rückmeldungen prüfen</button>
+<div class="fb warn" id="teacherFeedbackFb"></div>
+</div>
+<div class="block task"><div id="boundaries"></div><button class="btn outline" onclick="checkRows(BOUNDARIES,'boundariesFb','Grenzen')">Grenzen prüfen</button><div class="fb warn" id="boundariesFb"></div></div><div class="btnrow"><button class="btn" onclick="completeSection(8)">Abschnitt abschließen ▶</button></div></div></section>
+
+<section class="card locked" id="sec-9" data-section="9"><div class="ch" onclick="toggleCard(9)"><span class="ci">⚡</span><div class="ct"><b>9. Schwierige Gesprächsmomente</b><small>Widerstand · Wut · Schweigen</small></div><span class="status" id="status-9">gesperrt</span></div><div class="cb"><div class="block"><p>Widerstand kann Schutz sein. Schweigen kann Überforderung sein. Wut kann ein Hinweis auf Verletzung, Angst oder Kontrollverlust sein.</p></div><div class="block task"><div class="bl">Fehlerwerkstatt</div><p>Prüfen Sie in schwierigen Momenten zuerst die eigene Reaktion: Will ich beruhigen, kontrollieren, belehren oder wirklich verstehen? Professionell ist meist nicht die schnellste Antwort, sondern die Antwort, die Beziehung, Schutz und Auftrag gleichzeitig im Blick behält.</p></div><div class="block task"><div id="difficult"></div><button class="btn outline" onclick="checkRows(DIFFICULT,'difficultFb','Reaktionen')">Reaktionen prüfen</button><div class="fb warn" id="difficultFb"></div></div><div class="block ref"><label for="difficultReflection">Formulieren Sie eine hilfreiche Reaktion auf: „Sie können mir eh nicht helfen.“ Mindestens 80 Zeichen.</label><textarea id="difficultReflection" data-save="difficultReflection"></textarea><div class="hint" id="difficultReflectionHint">0 Zeichen</div><div class="val" id="val-9"></div></div><div class="btnrow"><button class="btn outline" onclick="toggleSol('sol9')">Musterlösung anzeigen</button><button class="btn" onclick="validateAndComplete(9)">Abschnitt abschließen ▶</button></div><div class="block sol" id="sol9"><p>„Es klingt, als hätten Sie schon oft erlebt, dass Hilfe nicht wirklich geholfen hat. Ich will nichts versprechen, was ich nicht halten kann. Wir können aber schauen, ob es einen kleinen Punkt gibt, an dem sich etwas verändern ließe.“</p></div></div></section>
+
+<section class="card locked" id="sec-10" data-section="10"><div class="ch" onclick="toggleCard(10)"><span class="ci">🧾</span><div class="ct"><b>10. Gesprächsplan für ein Erstgespräch</b><small>Struktur ohne Starrheit</small></div><span class="status" id="status-10">gesperrt</span></div><div class="cb"><div class="block task"><label for="conversationPlan">Erstellen Sie einen Gesprächsplan. Mindestens 150 Zeichen.</label><textarea id="conversationPlan" data-save="conversationPlan" placeholder="1. Begrüßung ...&#10;2. Auftrag klären ...&#10;3. Vertraulichkeit erklären ..."></textarea><div class="hint" id="conversationPlanHint">0 Zeichen</div><div class="val" id="val-10"></div></div><div class="block"><ul><li>Auftrag und Freiwilligkeit klären.</li><li>Vertraulichkeit und Grenzen transparent machen.</li><li>Die Sicht der beratenen Person zuerst hören.</li><li>Realistischen nächsten Schritt vereinbaren.</li></ul></div><div class="btnrow"><button class="btn outline" onclick="toggleSol('sol10')">Musterlösung anzeigen</button><button class="btn" onclick="validateAndComplete(10)">Abschnitt abschließen ▶</button></div><div class="block sol" id="sol10"><p>Begrüßung ohne Vorwurf. Zuweisung transparent machen. Freiwilligkeit klären. Vertraulichkeit und Grenzen erklären. Sicht des Schülers erfragen. Beobachtungen von Bewertungen trennen. Nächsten Schritt vereinbaren.</p></div></div></section>
+
+<section class="card locked" id="sec-11" data-section="11"><div class="ch" onclick="toggleCard(11)"><span class="ci">✅</span><div class="ct"><b>11. Gelingensnachweis</b><small>24 Fragen · 70 Prozent Bestehensgrenze</small></div><span class="status" id="status-11">gesperrt</span></div><div class="cb"><div class="block task"><div id="quiz"></div><div class="btnrow"><button class="btn" onclick="gradeQuiz()">Auswerten</button></div><div class="result" id="quizResult"></div></div><div class="btnrow"><button class="btn" onclick="validateAndComplete(11)">Abschnitt abschließen ▶</button></div><div class="val" id="val-11"></div></div></section>
+
+<section class="card locked" id="sec-12" data-section="12"><div class="ch" onclick="toggleCard(12)"><span class="ci">📤</span><div class="ct"><b>12. Abschluss, Transfer und Ergebnis sichern</b><small>Kernsätze · Praxischeck · Google Sheets</small></div><span class="status" id="status-12">gesperrt</span></div><div class="cb"><div class="block"><div class="bl">7 Kernsätze</div><ol><li>Beratung ist Unterstützung zur Klärung, nicht Disziplinierung.</li><li>Der Beratungsrahmen braucht Auftrag, Freiwilligkeit, Vertraulichkeit und Grenzen.</li><li>Aktives Zuhören ist ein Arbeitsinstrument.</li><li>Gute Fragen öffnen und strukturieren.</li><li>Ressourcenorientierung sucht Handlungsspielräume.</li><li>Grenzen der Beratung müssen fachlich kommuniziert werden.</li><li>Beratung bleibt eingebettet in Schule, Datenschutz, Schutzauftrag und Jugendhilfe-Kooperation.</li></ol></div><div class="block ref"><label for="procedureCheck">Praxischeck: Mindestens 5 Stichpunkte zur Beratungssicherheit an Ihrer Schule.</label><textarea id="procedureCheck" data-save="procedureCheck" placeholder="- Beratungsraum klären&#10;- Vertraulichkeitssatz festlegen&#10;- Rückmeldung an Lehrkräfte klären&#10;- Elternbeteiligung planen&#10;- Grenzen bei Schutzfragen erklären"></textarea><div class="hint" id="procedureCheckHint">0 von 5 Stichpunkten erkannt</div><label for="selfAssessment">Kompetenzselbsteinschätzung</label><select id="selfAssessment" data-save="selfAssessment"><option value="">Bitte auswählen</option><option value="1">1, sehr unsicher</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5, sehr sicher</option></select><div class="val" id="val-12"></div></div><div class="block law"><p>Ihre Eingaben werden nur übertragen, wenn Sie den Button „Ergebnis absenden“ anklicken. Ohne hinterlegte Google-Sheets-Anbindung bleiben Ihre Antworten lokal gespeichert.</p><label for="learnerName">Name oder Kürzel, erforderlich</label><input id="learnerName" data-save="learnerName" oninput="syncBottomName()" placeholder="z. B. EB"><label for="userEmail">E-Mail, erforderlich</label><input id="userEmail" type="email" data-save="userEmail" oninput="syncBottomEmail()" placeholder="z. B. name@example.de"><label for="learnerId">Lernenden-ID / Gruppe, optional</label><input id="learnerId" data-save="learnerId"><div class="btnrow"><button class="btn" onclick="validateAndComplete(12)">Modul abschließen</button><button class="btn secondary" id="sendBtn" onclick="sendResults()">Ergebnis absenden</button><button class="btn outline" onclick="exportResults()">JSON exportieren</button><button class="btn outline" onclick="window.print()">Drucken / PDF</button></div><div class="sendstatus warn show" id="sendStatus">Senden ist jederzeit möglich, sobald Name/Kürzel und E-Mail eingetragen sind. Unvollständige Bearbeitungen werden als Zwischenstand gespeichert.</div></div>
+<div class="block"><div class="bl">Bewertungsraster</div><table class="rubric"><thead><tr><th>Kriterium</th><th>Basisniveau</th><th>Gutes Niveau</th><th>Sehr gutes Niveau</th></tr></thead><tbody><tr><td>Beratungsrahmen</td><td>Auftrag und Vertraulichkeit werden genannt.</td><td>Auftrag, Freiwilligkeit, Grenzen und Rückmeldung werden verständlich erklärt.</td><td>Der Rahmen wird adressatengerecht, transparent und rechtlich sensibel formuliert.</td></tr><tr><td>Gesprächsführung</td><td>Es werden offene Fragen genutzt.</td><td>Zuhören, Spiegeln, Sortieren und Ressourcenfragen werden passend verbunden.</td><td>Die Gesprächsführung bleibt auch bei Widerstand, Schweigen oder Wut klar und beziehungsorientiert.</td></tr><tr><td>Rollenklärung</td><td>SSA wird von Unterricht und Disziplinierung unterschieden.</td><td>Grenzen zu Therapie, Schulpsychologie, Jugendhilfe und Schulleitung werden beachtet.</td><td>Der Fall wird systemisch eingeordnet, ohne Zuständigkeiten zu vermischen.</td></tr><tr><td>Transfer</td><td>Ein Gesprächsplan liegt vor.</td><td>Der Plan enthält Auftrag, Vertraulichkeit, Sichtweise, Ressourcen und nächsten Schritt.</td><td>Der Plan ist realistisch, überprüfbar, datenschutzsensibel und in der Schule nutzbar.</td></tr></tbody></table></div>
+<div class="block"><div class="bl">Literatur und Quellenhinweise</div><div class="source-list"><div class="source-item"><strong>Carl R. Rogers:</strong> Gesprächspsychotherapie und klientenzentrierte Beratung. Grundlegend für Empathie, Kongruenz und unbedingte Wertschätzung.</div><div class="source-item"><strong>Hans Thiersch:</strong> Lebensweltorientierte Soziale Arbeit. Wichtig für Beratung im Alltag und im Lebensraum Schule.</div><div class="source-item"><strong>Steve de Shazer / Insoo Kim Berg:</strong> Lösungsorientierte Kurzberatung. Relevant für Ressourcen, Ausnahmen und nächste kleine Schritte.</div><div class="source-item"><strong>DBSH Berufsethik:</strong> Orientierung an Autonomie, Gerechtigkeit, Solidarität und professioneller Verantwortung.</div><div class="source-item"><strong>Kooperationsverbund Schulsozialarbeit:</strong> Leitlinien und Standards für Schulsozialarbeit im Lern- und Lebensraum Schule.</div><div class="source-item"><strong>Niedersachsen:</strong> Soziale Arbeit in schulischer Verantwortung, Kooperation mit Schule und Kinder- und Jugendhilfe, örtliche Schutz- und Datenschutzverfahren.</div></div></div>
+<div class="block"><div class="bl">Ausblick auf Band 3, Modul 2</div><p>Das nächste Modul vertieft Gesprächsstruktur, Gesprächsphasen, Beratungsprozesse und systematische Fallklärung. Dieses Modul liefert dafür die Basis: Haltung, Rahmen, Erstkontakt, Zuhören, Fragen und Grenzen.</p></div>
+<div class="certificate-box" id="certificateBox">
+  <h3>Modul abgeschlossen</h3>
+  <p><strong>Band 3, Modul 1:</strong> Grundlagen professioneller Beratung</p>
+  <div class="certificate-grid">
+    <div class="certificate-item"><b>Name/Kürzel</b><span id="certName">-</span></div>
+    <div class="certificate-item"><b>Bearbeitet am</b><span id="certDate">-</span></div>
+    <div class="certificate-item"><b>Gelingensnachweis</b><span id="certScore">-</span></div>
+    <div class="certificate-item"><b>Status</b><span id="certStatus">-</span></div>
+  </div>
+  <p class="hint">Diese Abschlussmeldung ist eine lokale Bestätigung innerhalb des Lernmoduls. Sie ersetzt kein offizielles Zertifikat.</p>
+</div>
+<details class="block"><summary><b>Dozenten-/Lehrkraftansicht</b></summary><div id="teacherView"></div><button class="btn outline" onclick="refreshTeacherView()">Auswertung aktualisieren</button></details></div></section>
+
+</main></div>
+
+<script>
+const GOOGLE_SCRIPT_URL="https://script.google.com/macros/s/AKfycbwdTXq8sNSsfmNTgFXu2hNDzY_4786FWG2hlX5diRBOpy-UMWlKP35rvRwdjamm63YZCA/exec";
+const STORAGE_KEY="sol_band3_modul1_beratung_ni_v1";
+const TOTAL=12;
+let completed=[],answers={},quizAnswers={},quizScore=0,quizEvaluated=false;
+
+const PRE=[
+{id:"pre1",text:"Beratung ist vor allem dazu da, Schülerinnen und Schüler zur Vernunft zu bringen.",correct:"stimmt nicht",fb:"Beratung ist Klärung und Unterstützung, keine Disziplinierung."},
+{id:"pre2",text:"Vertraulichkeit sollte einschließlich ihrer Grenzen erklärt werden.",correct:"stimmt",fb:"Das schafft Sicherheit und Klarheit."},
+{id:"pre3",text:"Wenn eine Lehrkraft einen Schüler schickt, ist das Gespräch automatisch freiwillig.",correct:"stimmt nicht",fb:"Der Anlass kann unfreiwillig sein. Das muss transparent werden."},
+{id:"pre4",text:"Schulsozialarbeit ersetzt Therapie und Schulpsychologie.",correct:"stimmt nicht",fb:"Sie kann stabilisieren, beraten und vermitteln, ersetzt aber keine spezialisierten Hilfen."},
+{id:"pre5",text:"Gute Beratung muss nicht sofort eine Lösung liefern.",correct:"stimmt",fb:"Oft beginnt Beratung mit Klärung."}
+];
+const FRAME=[
+{id:"frame1",text:"„Ich soll dir erklären, dass du dich endlich benehmen musst.“",correct:"Disziplinierung"},
+{id:"frame2",text:"„Wir können erst klären, was aus deiner Sicht passiert ist.“",correct:"Beratung"},
+{id:"frame3",text:"„Ich entscheide jetzt, welche Strafe du bekommst.“",correct:"Nicht Aufgabe der SSA"},
+{id:"frame4",text:"„Ich kann nicht alles geheim halten, wenn Schutzfragen betroffen sind.“",correct:"Transparenz"},
+{id:"frame5",text:"„Die Lehrkraft will, dass ich mit dir spreche. Deine Sicht interessiert mich aber zuerst.“",correct:"Auftragsklärung"}
+];
+const ENTRY=[
+{id:"entry1",text:"„Setz dich. Du weißt ja selbst, dass dein Verhalten nicht geht.“",correct:"rot",fb:"Beschämend und vorannahmenreich."},
+{id:"entry2",text:"„Ich weiß, dass du geschickt wurdest. Wir können erst einmal klären, was du dazu sagst.“",correct:"gruen",fb:"Transparent und öffnend."},
+{id:"entry3",text:"„Wenn du nicht reden willst, schreibe ich das der Klassenleitung.“",correct:"rot",fb:"Druck statt Beratung."},
+{id:"entry4",text:"„Ich bin nicht hier, um dich fertigzumachen. Ich möchte verstehen, was los ist.“",correct:"gruen",fb:"Entlastend und klärend."}
+];
+const LISTEN=[
+{id:"listen1",text:"„Das klingt, als wärst du gerade sehr wütend.“",correct:"Gefühl spiegeln"},
+{id:"listen2",text:"„Wenn ich dich richtig verstehe, geht es um zwei Themen.“",correct:"Paraphrasieren/Strukturieren"},
+{id:"listen3",text:"„Ach, so schlimm wird es schon nicht sein.“",correct:"Bagatellisieren"},
+{id:"listen4",text:"„Lassen Sie uns einen Punkt nach dem anderen anschauen.“",correct:"Verlangsamen"},
+{id:"listen5",text:"„Warum machst du denn immer so einen Ärger?“",correct:"Beschämende Frage"}
+];
+const QUESTIONS=[
+{id:"qst1",text:"„Was ist aus deiner Sicht gerade das Wichtigste?“",correct:"Öffnend"},
+{id:"qst2",text:"„Du hast doch sicher wieder provoziert, oder?“",correct:"Suggestiv/problematisch"},
+{id:"qst3",text:"„Woran würdest du merken, dass es etwas besser geworden ist?“",correct:"Zielorientiert"},
+{id:"qst4",text:"„Was hat bisher ein bisschen geholfen?“",correct:"Ressourcenorientiert"},
+{id:"qst5",text:"„Warum kriegst du das nicht endlich hin?“",correct:"Beschämend/problematisch"}
+];
+const RESOURCE=[
+{id:"res1",text:"„Was hat trotz allem schon einmal ein wenig funktioniert?“",correct:"gruen",fb:"Ressourcenorientiert."},
+{id:"res2",text:"„Du bist halt einfach schwierig.“",correct:"rot",fb:"Etikettierend."},
+{id:"res3",text:"„Wer merkt am ehesten, wenn es dir schlechter geht?“",correct:"gruen",fb:"Sucht soziale Ressourcen."},
+{id:"res4",text:"„Dann musst du dich eben mehr anstrengen.“",correct:"rot",fb:"Moralisierend."},
+{id:"res5",text:"„Was wäre heute ein kleiner nächster Schritt?“",correct:"gruen",fb:"Handlungsorientiert."}
+];
+const BOUNDARIES=[
+{id:"b1",text:"Schülerin berichtet konkrete Suizidgedanken mit Plan.",correct:"Sofortige Schutzklärung"},
+{id:"b2",text:"Schüler möchte über Streit mit Freund sprechen.",correct:"Beratung möglich"},
+{id:"b3",text:"Eltern fragen nach Therapieplatz wegen massiver Angststörung.",correct:"Weitervermittlung/Fachhilfe prüfen"},
+{id:"b4",text:"Kind berichtet mögliche Gewalt zu Hause.",correct:"Schutzauftrag/Fachberatung prüfen"},
+{id:"b5",text:"Lehrkraft will, dass SSA eine Ordnungsmaßnahme ersetzt.",correct:"Auftrag zurückweisen/klären"}
+];
+const DIFFICULT=[
+{id:"d1",text:"„Sie können mir eh nicht helfen.“",correct:"Enttäuschung anerkennen"},
+{id:"d2",text:"Schüler schweigt fünf Minuten.",correct:"Ruhe lassen und Angebot machen"},
+{id:"d3",text:"Schülerin schreit: „Alle sind gegen mich!“",correct:"Gefühl spiegeln und deeskalieren"},
+{id:"d4",text:"Elternteil macht Vorwürfe gegen die Schule.",correct:"Anliegen strukturieren"},
+{id:"d5",text:"„Ist mir alles egal.“",correct:"Nicht sofort konfrontieren, Bedeutung erkunden"}
+];
+
+
+const PHASE_ASSIGN=[
+{id:"pha1",text:"„Ich erkläre kurz, was hier vertraulich bleibt und wo Grenzen sind.“",correct:"Ankommen und Rahmen klären"},
+{id:"pha2",text:"„Was ist aus deiner Sicht passiert?“",correct:"Sichtweise verstehen"},
+{id:"pha3",text:"„Ich höre gerade drei Themen: Klasse, Zuhause und Schlaf.“",correct:"Themen sortieren"},
+{id:"pha4",text:"„Was hat bisher zumindest ein bisschen geholfen?“",correct:"Ressourcen und Ausnahmen suchen"},
+{id:"pha5",text:"„Was wäre heute ein kleiner nächster Schritt?“",correct:"Nächsten Schritt vereinbaren"},
+{id:"pha6",text:"„Was darf ich der Lehrkraft zurückmelden?“",correct:"Rückmeldung klären"},
+{id:"pha7",text:"„Wer möchte eigentlich was von diesem Gespräch?“",correct:"Anlass und Auftrag klären"}
+];
+const BERATUNG_AMPEL=[
+{id:"ba1",text:"„Ich möchte erst deine Sicht verstehen.“",correct:"gruen",fb:"Gute Beratungshaltung. Die Perspektive der beratenen Person wird geöffnet."},
+{id:"ba2",text:"„Die Lehrkraft will wissen, was du gesagt hast.“",correct:"gelb",fb:"Kontextabhängig. Besser wäre, Rückmeldeumfang und Vertraulichkeit transparent zu klären."},
+{id:"ba3",text:"„Wenn du nichts sagst, kann ich nichts für dich tun.“",correct:"rot",fb:"Problematisch. Das erzeugt Druck und verengt das Gespräch."},
+{id:"ba4",text:"„Ich verspreche, dass niemand etwas erfährt.“",correct:"rot",fb:"Problematisch. Absolute Geheimhaltung ist bei Schutzfragen fachlich falsch."},
+{id:"ba5",text:"„Ich sage dir vorher, falls ich etwas weitergeben muss.“",correct:"gruen",fb:"Gute Transparenz. Das stärkt Vertrauen und Klarheit."}
+];
+
+const REPAIR=[
+{id:"rep1",text:"„Warum machst du immer Ärger?“",correct:"„Was passiert meistens kurz bevor es schwierig wird?“"},
+{id:"rep2",text:"„Du musst dich nur zusammenreißen.“",correct:"„Was würde dir helfen, in der Situation früher auszusteigen?“"},
+{id:"rep3",text:"„Wenn du nicht redest, kann ich nichts tun.“",correct:"„Wir können auch erstmal sortieren, ohne dass du alles erzählen musst.“"},
+{id:"rep4",text:"„Das ist doch nicht so schlimm.“",correct:"„Für dich scheint das gerade ziemlich belastend zu sein.“"}
+];
+const TEACHER_FB=[
+{id:"tfb1",text:"„Das Gespräch hat stattgefunden. Wir haben einen nächsten Schritt vereinbart.“",correct:"Eher zulässig"},
+{id:"tfb2",text:"„Er hat mir vertraulich erzählt, dass sein Vater ...“",correct:"Nicht ohne Grundlage"},
+{id:"tfb3",text:"„Für den Unterricht wäre hilfreich, wenn Sie zunächst kurze Arbeitsaufträge geben.“",correct:"Eher zulässig"},
+{id:"tfb4",text:"„Die Mutter ist eindeutig das Problem.“",correct:"Fachlich problematisch"},
+{id:"tfb5",text:"„Ich kann vertrauliche Inhalte nicht weitergeben, aber wir können schulische Unterstützungsmöglichkeiten besprechen.“",correct:"Sinnvoll"}
+];
+
+const QUIZ=[
+["Ein Schüler sagt: „Ich musste hierher, ich sag eh nichts.“ Was ist die beste erste Reaktion?",["„Dann schreibe ich der Lehrkraft, dass du verweigerst.“","„Ich weiß, dass du geschickt wurdest. Wir können erst einmal klären, was deine Sicht ist.“","„Du musst jetzt kooperieren.“","„Dann holen wir sofort deine Eltern.“"],1],
+["Was gehört zu einem transparenten Beratungsrahmen?",["Vertraulichkeit und Grenzen erklären","Alles immer geheim halten","Sofort Bericht an alle Lehrkräfte","Keine Auftragsklärung"],0],
+["Was ist Beratung in der Schulsozialarbeit vor allem?",["Disziplinierung","Klärung und Unterstützung","Therapieersatz","Leistungsbewertung"],1],
+["Eine Lehrkraft sagt: „Er stört ständig, erklären Sie ihm das mal.“ Was ist fachlich wichtig?",["Auftrag ungeprüft übernehmen","Auftrag klären und Beratung nicht zur Disziplinierung machen","Schüler bestrafen","Eltern sofort laden"],1],
+["Welche Reaktion zeigt aktives Zuhören?",["So schlimm ist das nicht","Wenn ich dich richtig verstehe ...","Warum machst du immer Ärger?","Das musst du sofort ändern"],1],
+["Welche Frage ist suggestiv?",["Was ist passiert?","Wie erlebst du die Situation?","Du hast doch wieder provoziert, oder?","Was wäre ein erster Schritt?"],2],
+["Was meint Ressourcenorientierung?",["Probleme ignorieren","Handlungsspielräume suchen","Alles schönreden","Schuldige finden"],1],
+["Wann ist Beratung allein nicht ausreichend?",["Bei akuter Selbstgefährdung","Bei normalem Gesprächsbedarf","Bei leichter Unsicherheit","Bei Wunsch nach Orientierung"],0],
+["Ein Schüler sagt: „Zu Hause ist gerade alles mies.“ Was ist die beste Reaktion?",["Sofort alles der Lehrkraft erzählen","Verlangsamen, zuhören, klären und Grenzen von Vertraulichkeit im Blick behalten","Thema wechseln","Sagen, dass Schule dafür nicht zuständig ist"],1],
+["Was ist eine gute Skalierungsfrage?",["Warum bist du so schwierig?","Auf einer Skala von 1 bis 10: Wie belastend ist es gerade?","Du weißt doch, dass du schuld bist?","Kannst du endlich ehrlich sein?"],1],
+["Welche Aussage ist problematisch?",["Ich möchte deine Sicht verstehen","Ich bin nicht hier, um dich fertigzumachen","Ich soll dir erklären, dass du dich benehmen musst","Wir klären den nächsten Schritt"],2],
+["Was ist eine Grenze von SSA?",["Beratung anbieten","Unterstützung vermitteln","Therapie ersetzen","Gesprächsrahmen klären"],2],
+["Eine Lehrkraft fragt nach dem Gespräch: „Was hat er genau erzählt?“ Was ist die beste Antwort?",["Alle Details weitergeben","Vertrauliche Inhalte nicht vollständig offenlegen, aber schulisch hilfreiche Unterstützungsmöglichkeiten besprechen","Gar nie etwas sagen","Die Lehrkraft anweisen, nicht mehr zu fragen"],1],
+["Welche Frage ist ressourcenorientiert?",["Warum klappt nie etwas?","Was hat bisher geholfen?","Wer ist schuld?","Warum bist du unmotiviert?"],1],
+["Was hilft bei schwierigen Gesprächsmomenten?",["Machtkampf","Beschämen","Gefühl anerkennen und verlangsamen","Druck erhöhen"],2],
+["Was ist Auftragsklärung?",["Auftrag der Lehrkraft ungeprüft übernehmen","Klären, wer was möchte und was Auftrag der SSA ist","Strafe festlegen","Diagnose erstellen"],1],
+["Was ist bei Kinderschutzhinweisen wichtig?",["Absolute Geheimhaltung versprechen","Grenzen von Vertraulichkeit erklären und Fachberatung prüfen","Ignorieren","Nur mit Klasse besprechen"],1],
+["Was passt zu Niedersachsen?",["Beratung ist losgelöst von Schule und Jugendhilfe","Beratung bleibt eingebettet in schulische Verantwortung, Datenschutz und Jugendhilfe-Kooperation","Beratung ersetzt Klassenkonferenzen","Beratung ist Therapie"],1],
+["Was ist kein gutes Gesprächsziel?",["Klären","kleiner nächster Schritt","Beschämen","Ressourcen sichtbar machen"],2],
+["Was kann Schweigen bedeuten?",["Immer Widerstand","Schutz, Unsicherheit oder Überforderung","Immer Zustimmung","Immer Ablehnung"],1],
+["Welche Formulierung ist grenzbewusst?",["Ich halte immer alles geheim","Ich erkläre, was vertraulich bleibt und wo ich handeln muss","Ich sage alles der Schulleitung","Du musst alles erzählen"],1],
+["Was sollte am Ende eines Erstgesprächs stehen?",["Beschämung","realistischer nächster Schritt","Note","Ordnungsmaßnahme durch SSA"],1],
+["Welche Aussage zur Rückmeldung an Lehrkräfte ist passend?",["Alles aus dem Gespräch gehört ins Kollegium","Nur vereinbarte oder notwendige Informationen im geklärten Umfang","Vertrauliche Inhalte dürfen als Druckmittel genutzt werden","Rückmeldung ist immer verboten"],1],
+["Was ist ein typischer Beratungsfehler?",["Verlangsamen","Paraphrasieren","zu schnell lösen wollen","nächsten Schritt vereinbaren"],2]
+];
+
+function save(){localStorage.setItem(STORAGE_KEY,JSON.stringify({completed,answers,quizAnswers,quizScore,quizEvaluated}));updateSendState()}
+function load(){try{let d=JSON.parse(localStorage.getItem(STORAGE_KEY)||"{}");completed=d.completed||[];answers=d.answers||{};quizAnswers=d.quizAnswers||{};quizScore=d.quizScore||0;quizEvaluated=d.quizEvaluated||false}catch(e){}}
+function toggleNav(){document.getElementById("navLinks").classList.toggle("collapsed")}
+function toggleCard(n){let c=document.getElementById("sec-"+n);if(c.classList.contains("locked")){alert("Dieser Abschnitt ist noch gesperrt. Bitte schließen Sie zuerst Abschnitt "+(n-1)+" vollständig ab.");return}c.classList.toggle("open")}
+function completeSection(n){if(!completed.includes(n))completed.push(n);let s=document.getElementById("status-"+n);s.textContent="erledigt";s.className="status done";document.getElementById("sec-"+n).classList.remove("open");unlock(n+1);updateProgress();save()}
+function unlock(n){if(n>TOTAL)return;let c=document.getElementById("sec-"+n);c.classList.remove("locked");c.classList.add("open");let s=document.getElementById("status-"+n);if(s.textContent==="gesperrt"){s.textContent="offen";s.className="status active"}c.scrollIntoView({behavior:"smooth",block:"start"})}
+function restore(){for(let i=1;i<=TOTAL;i++){if(i===1||completed.includes(i-1)||completed.includes(i)){let c=document.getElementById("sec-"+i);c.classList.remove("locked");let s=document.getElementById("status-"+i);if(!completed.includes(i)){s.textContent="offen";s.className="status active"}}if(completed.includes(i)){let s=document.getElementById("status-"+i);s.textContent="erledigt";s.className="status done"}}}
+function updateProgress(){let p=Math.round(completed.length/TOTAL*100);document.getElementById("progressText").textContent="Fortschritt: "+p+" %";document.getElementById("progressCount").textContent=completed.length+" von "+TOTAL+" Abschnitten";document.getElementById("fill").style.width=p+"%";let prog=document.querySelector(".progress[role=progressbar]");if(prog)prog.setAttribute("aria-valuenow",String(p));for(let i=1;i<=TOTAL;i++){let n=document.getElementById("nav-"+i);if(n){n.classList.toggle("done",completed.includes(i));n.classList.toggle("active",!completed.includes(i)&&!document.getElementById("sec-"+i).classList.contains("locked"));}}}
+function resetProgress(){if(confirm("Fortschritt und lokale Antworten löschen?")){localStorage.removeItem(STORAGE_KEY);location.reload()}}
+function toggleSol(id){document.getElementById(id).classList.toggle("show")}
+function showVal(n,msg){let v=document.getElementById("val-"+n);v.textContent=msg;v.className="val warn show"}
+function hideVal(n){let v=document.getElementById("val-"+n);if(v){v.textContent="";v.className="val"}}
+function minChars(id,n){return(document.getElementById(id).value.trim().length>=n)}
+function bullets(id){return document.getElementById(id).value.split(/\n|;/).map(x=>x.trim()).filter(Boolean).length}
+function validateAndComplete(n){if(n===4&&!minChars("confidentialityScript",100))return showVal("conf","Bitte mindestens 100 Zeichen zur Vertraulichkeitserklärung formulieren.");if(n===4&&!minChars("firstWords",80))return showVal(4,"Bitte mindestens 80 Zeichen zum Gesprächseinstieg formulieren.");if(n===9&&!minChars("difficultReflection",80))return showVal(9,"Bitte mindestens 80 Zeichen formulieren.");if(n===6&&!minChars("freeRepair",120))return showVal("repair","Bitte mindestens 120 Zeichen zur Freitext-Reparatur formulieren.");if(n===10&&!minChars("conversationPlan",150))return showVal(10,"Bitte mindestens 150 Zeichen formulieren.");if(n===11&&!quizEvaluated)return showVal(11,"Bitte Gelingensnachweis zuerst auswerten.");if(n===11&&Object.keys(quizAnswers).length<QUIZ.length)return showVal(11,"Bitte beantworten Sie alle Quizfragen.");if(n===12){if(bullets("procedureCheck")<5)return showVal(12,"Bitte mindestens fünf Stichpunkte eintragen.");if(!document.getElementById("selfAssessment").value)return showVal(12,"Bitte Kompetenzselbsteinschätzung auswählen.")}hideVal(n);if(n===4)hideVal("conf");if(n===6)hideVal("repair");completeSection(n)}
+function renderPre(){let w=document.getElementById("precheck");PRE.forEach(it=>{let d=document.createElement("div");d.className="item";d.innerHTML='<b>'+it.text+'</b><div class="choices">'+["stimmt","kommt darauf an","stimmt nicht"].map(v=>'<button class="choice" data-id="'+it.id+'" data-val="'+v+'">'+v+'</button>').join("")+'</div><div class="fb" id="fb-'+it.id+'"></div>';w.appendChild(d)});w.addEventListener("click",e=>{if(!e.target.matches(".choice"))return;let id=e.target.dataset.id,val=e.target.dataset.val;answers[id]=val;document.querySelectorAll('.choice[data-id="'+id+'"]').forEach(b=>b.classList.remove("active"));e.target.classList.add("active");let it=PRE.find(x=>x.id===id),fb=document.getElementById("fb-"+id);fb.textContent=(val===it.correct?"Richtig. ":"Bitte prüfen. ")+it.fb;fb.className="fb show "+(val===it.correct?"ok":"warn");save()})}
+function renderRows(id,rows,opts){let w=document.getElementById(id);rows.forEach(r=>{let d=document.createElement("div");d.className="row";d.innerHTML="<div>"+r.text+"</div><select id='"+r.id+"'><option value=''>Bitte auswählen</option>"+opts.map(o=>"<option>"+o+"</option>").join("")+"</select>";w.appendChild(d);let s=d.querySelector("select");if(answers[r.id])s.value=answers[r.id];s.onchange=()=>{answers[r.id]=s.value;save()}})}
+function checkRows(rows,fbid,label){let ok=0;rows.forEach(r=>{if(document.getElementById(r.id).value===r.correct)ok++});let fb=document.getElementById(fbid);fb.textContent=ok+" von "+rows.length+" "+label+" fachlich passend.";fb.className="fb show "+(ok===rows.length?"ok":"warn")}
+function renderAmpel(id,items){let w=document.getElementById(id);items.forEach(it=>{let d=document.createElement("div");d.className="item";d.innerHTML='<b>'+it.text+'</b><div class="choices">'+["gruen","gelb","rot"].map(v=>'<button class="choice" data-id="'+it.id+'" data-val="'+v+'">'+v+'</button>').join("")+'</div><div class="fb" id="fb-'+it.id+'"></div>';w.appendChild(d)});w.addEventListener("click",e=>{if(!e.target.matches(".choice"))return;let id=e.target.dataset.id,val=e.target.dataset.val;answers[id]=val;document.querySelectorAll('.choice[data-id="'+id+'"]').forEach(b=>b.classList.remove("active"));e.target.classList.add("active");let it=items.find(x=>x.id===id),fb=document.getElementById("fb-"+id);fb.textContent=(val===it.correct?"Richtig. ":"Naheliegender wäre "+it.correct+". ")+it.fb;fb.className="fb show "+(val===it.correct?"ok":"warn");save()})}
+function renderQuiz(){let w=document.getElementById("quiz");QUIZ.forEach((q,i)=>{let d=document.createElement("div");d.className="quiz-question";d.innerHTML="<b>"+(i+1)+". "+q[0]+"</b>"+q[1].map((o,j)=>'<div class="item" id="opt-'+i+'-'+j+'" onclick="selectQuiz('+i+','+j+')" style="cursor:pointer">'+o+"</div>").join("")+'<div class="fb" id="qfb-'+i+'"></div>';w.appendChild(d)})}
+function selectQuiz(i,j){quizAnswers[i]=j;document.querySelectorAll('[id^="opt-'+i+'-"]').forEach(e=>{e.style.borderColor="var(--line)";e.style.background="#f7f9fc"});let el=document.getElementById("opt-"+i+"-"+j);el.style.borderColor="var(--primary)";el.style.background="var(--primary2)";save()}
+function gradeQuiz(){if(Object.keys(quizAnswers).length<QUIZ.length){alert("Bitte beantworten Sie zuerst alle Quizfragen.");return}quizScore=0;quizEvaluated=true;QUIZ.forEach((q,i)=>{let chosen=quizAnswers[i],correct=q[2];if(chosen===correct)quizScore++;document.querySelectorAll('[id^="opt-'+i+'-"]').forEach(e=>{let j=Number(e.id.split("-").pop());if(j===correct){e.style.borderColor="var(--green)";e.style.background="var(--green2)"}else if(j===chosen){e.style.borderColor="var(--red)";e.style.background="var(--red2)"}});let fb=document.getElementById("qfb-"+i);fb.textContent=chosen===correct?"Richtig.":"Bitte prüfen.";fb.className="fb show "+(chosen===correct?"ok":"err")});let pct=Math.round(quizScore/QUIZ.length*100);let r=document.getElementById("quizResult");r.className="result show";r.innerHTML='<div class="score">'+quizScore+" / "+QUIZ.length+'</div><b>'+(pct>=70?"Bestanden":"Noch nicht bestanden")+" · "+pct+" %</b>";save()}
+function hook(){document.querySelectorAll("[data-save]").forEach(el=>{let k=el.dataset.save;if(answers[k])el.value=answers[k];el.oninput=()=>{answers[k]=el.value;updateHints();save()};el.onchange=()=>{answers[k]=el.value;updateHints();save()}});updateHints()}
+function updateHints(){["firstWords","confidentialityScript","freeRepair","difficultReflection","conversationPlan"].forEach(id=>{let e=document.getElementById(id),h=document.getElementById(id+"Hint");if(e&&h)h.textContent=e.value.trim().length+" Zeichen"});let p=document.getElementById("procedureCheck"),h=document.getElementById("procedureCheckHint");if(p&&h)h.textContent=bullets("procedureCheck")+" von 5 Stichpunkten erkannt"}
+function syncTopName(){let t=document.getElementById("topName"),b=document.getElementById("learnerName");if(b)b.value=t.value;answers.learnerName=t.value;save()}
+function syncBottomName(){let t=document.getElementById("topName"),b=document.getElementById("learnerName");t.value=b.value;answers.learnerName=b.value;save()}
+function syncTopEmail(){let t=document.getElementById("topEmail"),b=document.getElementById("userEmail");if(b)b.value=t.value;answers.userEmail=t.value;save()}
+function syncBottomEmail(){let t=document.getElementById("topEmail"),b=document.getElementById("userEmail");if(t)t.value=b.value;answers.userEmail=b.value;save()}
+function initName(){let v=answers.learnerName||"";document.getElementById("topName").value=v;let b=document.getElementById("learnerName");if(b)b.value=v;let e=answers.userEmail||"";let te=document.getElementById("topEmail");if(te)te.value=e;let be=document.getElementById("userEmail");if(be)be.value=e}
+function collectAnswerSet(arr){let o={};arr.forEach(x=>o[x.id]=answers[x.id]||"");return o}
+function payload(){return{timestamp:new Date().toISOString(),courseTitle:"Satz SOL-Schulsozialarbeit Niedersachsen",bandNumber:3,bandTitle:"Beratung und Gesprächsführung",moduleNumber:1,moduleTitle:"Grundlagen professioneller Beratung",learnerName:document.getElementById("learnerName").value||document.getElementById("topName").value,email:(document.getElementById("userEmail")&&document.getElementById("userEmail").value)||document.getElementById("topEmail").value||"",learnerId:document.getElementById("learnerId").value||"",progressPercent:Math.round(completed.length/TOTAL*100),completedSections:completed,
+quizScore,quizMaxScore:QUIZ.length,quizPercent:Math.round(quizScore/QUIZ.length*100),quizPassed:Math.round(quizScore/QUIZ.length*100)>=70,
+quizEvaluated,
+preCheckAnswers: collectAnswerSet(PRE),
+phaseAssignAnswers: collectAnswerSet(PHASE_ASSIGN),
+frameAnswers: collectAnswerSet(FRAME),
+beratungAmpelAnswers: collectAnswerSet(BERATUNG_AMPEL),
+entryAnswers: collectAnswerSet(ENTRY),
+listenAnswers: collectAnswerSet(LISTEN),
+questionAnswers: collectAnswerSet(QUESTIONS),
+dialogRepairAnswers: collectAnswerSet(REPAIR),
+resourceAnswers: collectAnswerSet(RESOURCE),
+teacherFeedbackAnswers: collectAnswerSet(TEACHER_FB),
+boundaryAnswers: collectAnswerSet(BOUNDARIES),
+difficultAnswers: collectAnswerSet(DIFFICULT),
+reflectionAnswers:{firstWords:answers.firstWords||"",confidentialityScript:answers.confidentialityScript||"",freeRepair:answers.freeRepair||"",difficultReflection:answers.difficultReflection||"",conversationPlan:answers.conversationPlan||"",procedureCheck:answers.procedureCheck||""},
+finalCompetenceSelfAssessment:document.getElementById("selfAssessment").value||"",
+userAgent:navigator.userAgent}}
+
+function updateCertificate(){
+let box=document.getElementById("certificateBox");if(!box)return;
+let done=completed.includes(12);box.classList.toggle("show",done);
+document.getElementById("certName").textContent=(document.getElementById("learnerName").value||document.getElementById("topName").value||"-");
+document.getElementById("certDate").textContent=new Date().toLocaleDateString("de-DE");
+document.getElementById("certScore").textContent=quizEvaluated?(quizScore+" / "+QUIZ.length):"-";
+document.getElementById("certStatus").textContent=(quizEvaluated&&Math.round(quizScore/QUIZ.length*100)>=70)?"bestanden":"offen / nicht bestanden";
+}
+function updateSendState(){updateCertificate();let name=(document.getElementById("topName").value||"").trim();let emailInput=document.getElementById("topEmail");let email=(emailInput&&emailInput.value||"").trim();let emailOk=emailInput&&emailInput.checkValidity()&&email.length>0;let ready=name&&emailOk;["sendBtn","topSend"].forEach(id=>{let b=document.getElementById(id);if(b)b.disabled=!ready});let msg=!name?"Name/Kürzel eintragen.":!email?"E-Mail eintragen.":!emailOk?"Gültige E-Mail eintragen.":"Bereit zum Senden. Zwischenstände sind erlaubt.";document.getElementById("topStatus").textContent=msg;let s=document.getElementById("sendStatus");if(s){s.textContent=ready?"Bereit zum Absenden. Auch unvollständige Bearbeitungen werden gespeichert und per E-Mail rückgemeldet.":msg;s.className="sendstatus "+(ready?"ok":"warn")+" show"}}
+async function sendResults(){let nameInput=document.getElementById("topName");let emailInput=document.getElementById("topEmail");let name=(nameInput&&nameInput.value||"").trim();let email=(emailInput&&emailInput.value||"").trim();if(!name){alert("Bitte zuerst Name/Kürzel eintragen.");if(nameInput)nameInput.focus();return}if(emailInput&&!emailInput.checkValidity()){emailInput.reportValidity();return}if(!email){alert("Bitte zuerst E-Mail eintragen.");if(emailInput)emailInput.focus();return}if(!GOOGLE_SCRIPT_URL){let s=document.getElementById("sendStatus");if(s){s.textContent="Keine Google-Sheets-Anbindung hinterlegt. Lokal gespeichert.";s.className="sendstatus warn show"}return}let s=document.getElementById("sendStatus");try{if(s){s.textContent="Wird gesendet ...";s.className="sendstatus warn show"}let res=await fetch(GOOGLE_SCRIPT_URL,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(payload())});let txt=await res.text();let data={};try{data=JSON.parse(txt)}catch(parseError){}if(data.ok===false){throw new Error(data.message||"Apps Script meldet einen Fehler.")}if(s){s.textContent="Gespeichert. Feedback-Mail wird an die eingetragene E-Mail und an die Projektleitung gesendet.";s.className="sendstatus ok show"}alert("Ergebnis übermittelt. Du erhältst eine automatische Rückmeldung per E-Mail.")}catch(e){if(s){s.textContent="Übermittlung fehlgeschlagen. Lokal gespeichert. Fehler: "+(e.message||e);s.className="sendstatus err show"}alert("Übermittlung fehlgeschlagen. Lokal gespeichert.")}}
+function exportResults(){let blob=new Blob([JSON.stringify(payload(),null,2)],{type:"application/json"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="band3_modul1_beratung_ergebnisse.json";a.click();URL.revokeObjectURL(url)}
+function refreshTeacherView(){
+let p=payload();
+let pct=p.quizPercent||0;
+document.getElementById("teacherView").innerHTML=
+'<div class="teacher-grid">'+
+'<div class="teacher-tile"><b>Fortschritt</b><span>'+p.progressPercent+' %</span></div>'+
+'<div class="teacher-tile"><b>Quiz</b><span>'+p.quizScore+' / '+p.quizMaxScore+'</span></div>'+
+'<div class="teacher-tile"><b>Bestanden</b><span>'+(p.quizPassed?'Ja':'Nein')+'</span></div>'+
+'</div>'+
+'<p><strong>Name/Kürzel:</strong> '+(p.learnerName||'-')+'</p>'+
+'<p><strong>Praxischeck:</strong><br>'+((p.reflectionAnswers&&p.reflectionAnswers.procedureCheck)||'-').replace(/\n/g,"<br>")+'</p>'+
+'<details><summary>Rohdaten anzeigen</summary><pre>'+JSON.stringify(p,null,2)+'</pre></details>';
+}
+
+load();renderPre();
+renderRows("phaseAssign",PHASE_ASSIGN,["Ankommen und Rahmen klären","Anlass und Auftrag klären","Sichtweise verstehen","Themen sortieren","Ressourcen und Ausnahmen suchen","Nächsten Schritt vereinbaren","Rückmeldung klären"]);
+renderRows("frame",FRAME,["Beratung","Disziplinierung","Nicht Aufgabe der SSA","Transparenz","Auftragsklärung"]);
+renderAmpel("beratungAmpel",BERATUNG_AMPEL);
+renderAmpel("entry",ENTRY);
+renderRows("listen",LISTEN,["Gefühl spiegeln","Paraphrasieren/Strukturieren","Bagatellisieren","Verlangsamen","Beschämende Frage"]);
+
+renderRows("repair",REPAIR,["„Was passiert meistens kurz bevor es schwierig wird?“","„Was würde dir helfen, in der Situation früher auszusteigen?“","„Wir können auch erstmal sortieren, ohne dass du alles erzählen musst.“","„Für dich scheint das gerade ziemlich belastend zu sein.“"]);
+renderRows("teacherFeedback",TEACHER_FB,["Eher zulässig","Nicht ohne Grundlage","Fachlich problematisch","Sinnvoll"]);
+renderRows("questions",QUESTIONS,["Öffnend","Suggestiv/problematisch","Zielorientiert","Ressourcenorientiert","Beschämend/problematisch"]);
+renderAmpel("resources",RESOURCE);
+renderRows("boundaries",BOUNDARIES,["Sofortige Schutzklärung","Beratung möglich","Weitervermittlung/Fachhilfe prüfen","Schutzauftrag/Fachberatung prüfen","Auftrag zurückweisen/klären"]);
+renderRows("difficult",DIFFICULT,["Enttäuschung anerkennen","Ruhe lassen und Angebot machen","Gefühl spiegeln und deeskalieren","Anliegen strukturieren","Nicht sofort konfrontieren, Bedeutung erkunden"]);
+renderQuiz();initName();hook();restore();updateProgress();updateSendState();
+</script>
+</body>
+</html>
